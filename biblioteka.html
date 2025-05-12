@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн библиотека | Алёнушка</title>
+    <link rel="stylesheet" href="biblioteka.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-book"></i> Библиотека</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="user.html"><i class="fas fa-home"></i> Главная</a>
+            <a href="obloko.html"><i class="fas fa-cloud"></i> Облако</a>
+            <a href="#" class="active"><i class="fas fa-book-open"></i> Книги</a>
+            <a href="user.html"><i class="fas fa-user"></i> Профиль</a>
+            <a href="#"><i class="fas fa-cog"></i> Настройки</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h1><i class="fas fa-book-reader"></i> Коллекция книг | от Алёнки</h1>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Поиск книг...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover" style="background-color: #FF9AA2;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Война и мир</h3>
+                    <p>Лев Толстой</p>
+                    <div class="book-actions">
+                        <a href="#" class="read-btn">Читать</a>
+                        <button class="download-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background-color: #FFB7B2;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Преступление и наказание</h3>
+                    <p>Ф.М. Достоевский</p>
+                    <div class="book-actions">
+                        <a href="#" class="read-btn">Читать</a>
+                        <button class="download-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background-color: #FFDAC1;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Мастер и Маргарита</h3>
+                    <p>М.А. Булгаков</p>
+                    <div class="book-actions">
+                        <a href="#" class="read-btn">Читать</a>
+                        <button class="download-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background-color: #E2F0CB;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Евгений Онегин</h3>
+                    <p>А.С. Пушкин</p>
+                    <div class="book-actions">
+                        <a href="#" class="read-btn">Читать</a>
+                        <button class="download-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background-color: #B5EAD7;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Анна Каренина</h3>
+                    <p>Лев Толстой</p>
+                    <div class="book-actions">
+                        <a href="#" class="read-btn">Читать</a>
+                        <button class="download-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover" style="background-color: #C7CEEA;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Отцы и дети</h3>
+                    <p>И.С. Тургенев</p>
+                    <div class="book-actions">
+                        <a href="#" class="read-btn">Читать</a>
+                        <button class="download-btn"><i class="fas fa-download"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный акаунт | Админа</title>
+  <link rel="icon" type="image/png" href="../img/ico.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      background: linear-gradient(216deg, #4a00e0, #8e2de2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+    h1 {
+      color: #ff5722;
+    }
+    .admin-features {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .logout-btn {
+      padding: 10px 20px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .logout-btn:hover {
+      background-color: #e64a19;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, Admin!</h1>
+    <div class="user-info">
+        Logged in as: <strong><span id="user-login"></span></strong>
+    </div>
+    <div class="admin-features">
+      <h3>Admin Features:</h3>
+      <ul>
+        <li>User Management</li>
+        <li>System Settings</li>
+        <li>Content Moderation</li>
+        <li>Analytics Dashboard</li>
+      </ul>
+    </div>
+    <button class="logout-btn" onclick="window.location.href='account.html'">Logout</button>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // Проверка авторизации
+      const userLogin = sessionStorage.getItem('userLogin');
+      const isAdmin = sessionStorage.getItem('isAdmin');
+      
+      if (!userLogin) {
+        window.location.href = 'account.html';
+        return;
+      }
+      
+      // Проверка прав администратора
+      if (isAdmin !== 'true') {
+        window.location.href = 'user.html';
+        return;
+      }
+      
+      // Отображение информации о пользователе
+      document.getElementById('user-login').textContent = userLogin;
+      
+      // Очистка сессии при logout
+      document.querySelector('.logout-btn').addEventListener('click', () => {
+        sessionStorage.clear();
+      });
+    });
+  </script>
+</body>
+</html>

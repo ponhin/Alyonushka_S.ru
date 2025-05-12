@@ -1,0 +1,100 @@
+/*Адаптивная херня*/
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    .hero-section {
+        gap: 30px;
+    }
+}
+
+/* adaptation.css - Адаптивные стили */
+
+@media (max-width: 768px) {
+    .container {
+      padding: 20px;
+      margin: 20px;
+      width: calc(100% - 40px);
+    }
+    
+    .sidebar {
+      z-index: 999;
+    }
+    
+    .main-content {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+    }
+    
+    .container {
+      padding: 15px;
+      margin: 10px;
+      width: calc(100% - 20px);
+    }
+    
+    .logout-btn {
+      width: 100%;
+      padding: 12px;
+    }
+    
+    .sidebar {
+      width: 200px;
+    }
+    
+    .sidebar-header h2 {
+      font-size: 18px;
+    }
+    
+    .sidebar-menu a {
+      font-size: 14px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    
+    .nav-active {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

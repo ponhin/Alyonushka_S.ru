@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Облоко | Алёнушка</title>
+    <link rel="stylesheet" href="obloko.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Содержимое сервера</h1>
+            <div class="server-info">
+                <button id="refresh-btn">Обновить</button>
+                <a href="user.html">Главная</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Загрузка данных...</p>
+            </div>
+
+            <div class="error" id="error" style="display: none;">
+                <p>Ошибка при загрузке данных с сервера</p>
+                <button id="retry-btn">Попробовать снова</button>
+            </div>
+
+            <div class="server-content" id="server-content" style="display: none;">
+                <div class="path-navigation">
+                    <button id="home-btn">Корневая директория</button>
+                    <span id="current-path">/</span>
+                </div>
+                <div class="file-list" id="file-list">
+                </div>
+
+                <div class="file-preview" id="file-preview" style="display: none;">
+                    <h3>Просмотр файла: <span id="file-name"></span></h3>
+                    <pre id="file-content"></pre>
+                    <button id="back-btn">Назад к списку</button>
+                </div>
+                <div class="file-upload" id="file-upload">
+                    <h3>Загрузить файл</h3>
+                    <form id="upload-form">
+                        <input type="file" id="file-input" multiple>
+                        <button type="submit">Загрузить</button>
+                    </form>
+                    <div class="upload-status" id="upload-status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="obloko.js"></script>
+</body>
+</html>
